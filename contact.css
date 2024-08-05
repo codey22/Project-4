@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.copy p {
+    width: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 59px;
+    font-weight: bolder;
+    background-color: beige;
+    color: orangered;
+}
+.social {
+    box-sizing: border-box;
+    float: right;
+    height: 40px;
+    padding: 33px 15px 0px 0px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: medium;
+    background-color: rgb(19, 200, 209);
+    margin: 0 10px 10px 0;
+    line-height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    color: yellow;
+}
+
+.social-icons a:hover {
+    color: blueviolet;
+}

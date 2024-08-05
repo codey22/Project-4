@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+:root{
+    --primary: #33cff2;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.left-bar{
+    width: 200px;
+    height: 100vh;
+    background-color: var(--primary);
+    position: fixed;
+    left: 0px;
+    padding:10% 39px;
+    box-sizing: border-box;
+
+}
+.left-bar h2{
+    color: white;
+
+}
+.left-bar ul{
+    margin-top: 90%;
+}
+.left-bar li{
+    display: block;
+}
+.left-bar li a{
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    line-height: 39px;
+    width: 100%;
+    padding-left: 0;
+}
+.left-bar li a:hover{
+    background-color: white;
+    color: black;
+}
+.right-bar{
+    width: 1000px;
+    float: right;
+    box-sizing: border-box;
+    right:0px;
+    padding: auto;
+}
+.right-bar h1{
+    font-size: 63px;
+    font-weight: 600;
+    padding-top: 79px;
+}
+.right-bar h2{
+    font-size: 45px;
+    color: red;
+    padding-bottom:50px;
+}
+.gallery{
+    width:900px;
+    display: flex;
+    grid-template-columns: auto auto;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+.box img{
+    width: 100%;
+
+}
+.team{
+    width:900px;
+    display: flex;
+    grid-template-columns: auto auto auto;
+    column-gap: 15px;
+    row-gap: 10px;
+    color: grey;
+}
+.team img{
+    width: 100%;
+    margin-right: 20px;
+    
+}
+.packages1{
+    width: 410px;
+    height: 470px;
+    background-color:#f1f1f1;
+    float: left;
+    margin-top: 22px;
+}
+.packages1 h3{
+    background-color:#616161;
+    line-height:100px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.packages1 li{
+    font-size: 17px;
+    text-decoration: none;
+    line-height: 39px;
+    text-align: center;
+    list-style: none;
+    font-weight: bolder;
+    width: 100%;
+    padding-left: 0;
+}
+.packages1 button{
+    text-align: center;
+    font-size: 19px;
+    background-color:#616161;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-left: 175px;
+    
+}
+.packages1 button:hover{
+    background-color: burlywood;
+}
+.packages2{
+    width: 410px;
+    height: 470px;
+    background-color: #f1f1f1;
+    float: right;
+    margin: 22px 165px 0px 0px;
+}
+.packages2 h3{
+    background-color: #f44336;
+    line-height:100px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.packages2 button{
+    text-align: center;
+    font-size: 19px;
+    background-color: #f44336;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    margin-left: 175px;
+}
+.packages2 button:hover{
+    background-color:burlywood;
+}
+.packages2 li{
+    font-size: 17px;
+    text-decoration: none;
+    line-height: 39px;
+    text-align: center;
+    list-style: none;
+    font-weight: bolder;
+    width: 100%;
+    padding-left: 0; 
+}
+.contact{
+    width: 100%;
+    float: left;
+    clear: both;
+}
+.form-group{
+    float: left;
+    width: 100%;
+}
+.form-group label{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+.form-group input{
+    float: left;
+    width: 100%;
+    line-height: 41px;
+    border: 1px solid #f44336;
+}
+.form-group input[type="Submit"] {
+    background-color: #f44336;
+    font-size: 19px;
+    color: white;
+}
+

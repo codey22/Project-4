@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contact Us!</title>
+</head>
+<body>
+    <div class="container">
+         <header class="modal-header"><h1 style="color: orange;">Please Fillup All The Details Accordingly</h1></header>
+        <form>
+            <div class="form-group">
+                <label>Name</label><span class="text-danger">*</span>
+                <input type="text" id="uname" onkeyup="nameValid()" class="form-control" required>
+                <section class="text-danger" id="name_error"></section>
+            </div>
+            <div class="form-group">
+                <label>Phone</label><span class="text-danger">*</span>
+                <input type="text" id="uphone" onkeyup="phoneValid()"   class="form-control" required>
+                <section class="text-danger" id="phone_error"></section>
+            </div>
+            <div class="form-group">
+                <label>Email</label><span class="text-danger">*</span>
+                <input type="text" id="uemail" onkeyup="emailvalid()"    class="form-control" required>
+                <section class="text-danger" id="email_error"></section>
+            </div>
+            <div class="form-group">
+                <label>Upload Image</label>
+                <input type="file" onchange="image_preview()" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="pass1" onkeyup="passValid()"   class="form-control" required>
+                <section class="text-danger" id="pass_error"></section>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" id="con_pass" class="form-control" required>
+                <input type="checkbox" id="ch" onclick="matchtoggle()" > Show/hide
+            </div>
+            <br>
+            <div class="form-group">
+                <button class="btn btn-sm btn-info" id="btn" style="color: white; font-weight: bold;">Submit</button>
+            </div>
+        </form>
+      </div>
+      <footer>
+        <div class="social">
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="copy">
+            <p>Copyright &copy; FashionDesign.com</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d144000.9184865766!2d12.429015632333646!3d55.671350590915644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469209c70bafffff%3A0x2cb7556d2067d9d7!2sTAWAST%20Clothing!5e0!3m2!1sen!2sin!4v1703914159778!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+      <script>
+        function nameValid(){
+			var name=document.getElementById("uname").value;
+
+			if(name!=''){
+					 var nameRegex=/^[a-zA-Z ]{3,20}$/;
+					
+					if(nameRegex.test(name)){
+
+		document.getElementById("name_error").innerHTML="";
+	    document.getElementById("btn").disabled=false;
+		document.getElementById('uname').classList.remove("is-invalid");	
+
+					}else{
+				document.getElementById("name_error").innerHTML="Please enter  valid name does not support any number";
+				document.getElementById("btn").disabled=true;
+				document.getElementById("uname").classList.add("is-invalid");	
+					}
+
+
+
+			}else{
+				document.getElementById("name_error").innerHTML="This field should'nt be blank";
+				document.getElementById("btn").disabled=true;
+				document.getElementById("uname").classList.add("is-invalid");
+
+			}
+
+
+		}
+        function phoneValid(){
+			var name=document.getElementById("uphone").value;
+
+			if(name!=''){
+					 var nameRegex=/^[7-9][0-9]{9}$/;
+					
+					if(nameRegex.test(name)){
+
+		document.getElementById("phone_error").innerHTML="";
+	    document.getElementById("btn").disabled=false;
+		document.getElementById('uphone').classList.remove("is-invalid");	
+
+					}else{
+				document.getElementById("phone_error").innerHTML="Please enter a valid number";
+				document.getElementById("btn").disabled=true;
+				document.getElementById("uphone").classList.add("is-invalid");	
+					}
+
+
+
+			}else{
+				document.getElementById("phone_error").innerHTML="This field should'nt be blank";
+				document.getElementById("btn").disabled=true;
+				document.getElementById("uphone").classList.add("is-invalid");
+
+			}
+
+
+		}
+        function emailvalid(){
+		 	var email=document.getElementById('uemail').value;
+
+		 	var emailRegex= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		 	if(emailRegex.test(email)){
+		 		document.getElementById('email_error').innerHTML="";
+                document.getElementById('btn').disabled=false;
+                document.getElementById('uemail').classList.remove('is-invalid');
+
+		 	}else{
+		 		document.getElementById('email_error').innerHTML="Please enter a valid email";
+		 		document.getElementById('btn').disabled=true;
+		 		document.getElementById('uemail').classList.add('is-invalid');
+		 	}
+		 }
+         function image_preview(){
+		 	console.log(event.target.files[0]);
+		 	var image= URL.createObjectURL(event.target.files[0]);
+		 	document.getElementById('show').innerHTML= "<img src='"+image+ "' height='120px' width='120px'>";
+		 }
+         function passValid(){
+		 	var password=document.getElementById('pass1').value;
+			var regex=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+		 	if( regex.test(password)){
+		 		document.getElementById('pass_error').innerHTML="";
+		 		document.getElementById('btn').disabled=false;
+		 		document.getElementById('pass1').classList.remove('is-invalid');	
+
+		 	}else{
+		 		
+		 	document.getElementById('pass_error').innerHTML="Please enter minimum 6 to 16 letter and one letter must be in capital";
+		 		document.getElementById('btn').disabled=true;
+		 		document.getElementById('pass1').classList.add('is-invalid');	
+
+		 	}
+		 }
+         function matchtoggle(){
+         	var password=document.getElementById('pass1');
+         	var confirm_password=document.getElementById('con_pass');
+         	var checkbox1=document.getElementById('ch');
+
+         	if(checkbox1.checked){
+              password.type =confirm_password.type='text';
+              
+         	} else
+         	{
+         		password.type = confirm_password.type='password';
+         	}
+         }
+      </script>
+</body>
+</html>
